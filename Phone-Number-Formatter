@@ -1,0 +1,12 @@
+let fs = contact.target.value;
+
+let r = /(\D+)/g,
+    npa = '',
+    nxx = '',
+    last4 = '';
+fs = fs.replace(r, '');
+npa = fs.substr(0, 3);
+nxx = fs.substr(3, 3);
+last4 = fs.substr(6, 4);
+fs = npa + ' ' + nxx + ' ' + last4;
+contact.target.value = fs;
